@@ -35,21 +35,40 @@ class obj
 
         this.image = 'sprites/' + nameImage + this.frame + '.png'
     }
+
+    animationJPG(speed, limit, nameImage) 
+    {
+        this.timer++
+        if (this.timer > speed) 
+        {
+            this.timer = 0
+            this.frame++
+        }
+        
+        if(this.frame > limit) 
+        {
+            this.frame = 1
+        }
+
+        this.image = 'sprites/' + nameImage + this.frame + '.jpg'
+    }
+
 }
 
 class BG extends obj 
 {
-    move() {}
+    move(speed, limit, pos) 
+    {
+        this.px -= speed
+        if(this.px < -limit)
+        {
+            this.px = pos
+        }
+    }
 }
 
 class BANANACAT extends obj
 {
-    fall(speedDown, gravity)
-    {
-        speedDown += gravity
-        this.py = Math.min(this.py + speedDown, this.py)
-    }
-
     detectCollision(obj) 
     {
         return this.px < obj.px + obj.width &&   //a's top left corner doesn't reach b's top right corner
@@ -60,11 +79,6 @@ class BANANACAT extends obj
 }
 
 class OBSTACLES extends obj 
-{
-    //
-}
-
-class FOOD extends OBSTACLES
 {
     //
 }
