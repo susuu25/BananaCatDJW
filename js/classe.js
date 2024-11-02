@@ -80,5 +80,12 @@ class BANANACAT extends obj
 
 class OBSTACLES extends obj 
 {
-    //
+    moveRespaw(speed, limit, max, min)
+    {
+        this.px -= speed
+        if (this.px < -limit) 
+        {
+            this.px = Math.random() * (max - min) + min
+        }
+    }
 }

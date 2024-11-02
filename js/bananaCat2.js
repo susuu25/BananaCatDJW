@@ -7,12 +7,14 @@ let bg = new BG(0, 0, 1280, 600, 'sprites/background1.jpg')
 let bg2 = new BG(1280, 0, 1280, 600, 'sprites/background2.jpg')
 
 let bananaCat = new BANANACAT(50, 385, 230, 216, 'sprites/bananaCat1.png')
+let puddle = new OBSTACLES(1280, 430, 230, 215, 'sprites/puddle.png')
 
 function draw() 
 {
     bg.drawing()
     bg2.drawing()
     bananaCat.drawing()
+    puddle.drawing()
 }
 
 function update()
@@ -22,9 +24,12 @@ function update()
     
     speedDown += gravity
     bananaCat.py = Math.min(bananaCat.py + speedDown, 385)
-    jump()
     bananaCat.animation(10, 8, 'bananaCat')
-    console.log(bananaCat.py)
+
+    puddle.moveRespaw(7, 1380, 1000, 900)
+
+    jump()
+    collision()
 }
 
 
@@ -35,11 +40,16 @@ function jump()
         if((e.code == "Space" || e.code == "ArrowUP") && bananaCat.py == 385)
             {
                 speedDown = -13
-                console.log(speedDown)
             } 
         })
 }
         
+function collision() 
+{
+    if (bananaCat.detectCollision(puddle)) {
+        window.location.href='gameOver.html'
+    }
+}
 
 function main()
 {
