@@ -1,0 +1,242 @@
+body {
+    font-family:'Courier New', Courier, monospace;
+    background-color: #f0f0f5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 70vh;
+    margin: 0;
+}
+
+#board {
+    background-color: lightgray;
+    border-bottom: 1px solid black;
+}
+
+h1 {
+    font-size: 3rem;
+    color: #333;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Contêiner dos botões */
+.contain {
+    display: flex;
+    gap: 20px;
+}
+
+/* Estilos dos botões */
+.button {
+    padding: 15px 30px;
+    background-color: #dbc12e; 
+    color: #333; 
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+/* Efeito hover */
+.button:hover {
+    background-color: #cca420;
+    transform: scale(1.05);
+}
+
+#pagina-armario {
+    background-image: url('../imagens/armario.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.button-container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+}
+
+.image-button {
+    width: 100px;
+    height: 100px;
+    background-size: cover;
+    background-position: center;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    position: absolute;
+}
+
+/* Posições específicas dos botões */
+#botao1 {
+    background-image: url('../imagens/gato amarelo.png');
+    top: 46.3%;
+    left: 64.1%;
+    background-color:#fff;
+    width:120px;
+    height:120px;
+}
+
+#botao2 {
+    background-image: url('../imagens/gato branco.png');
+    bottom: 41.4%;
+    right: 19.3%;
+    background-color:#fff;
+    width:120px;
+    height:120px
+}
+
+#botao3 {
+    background-image: url('../imagens/gato verde.png');
+    top: 65%;
+    left: 69.3%;
+    width:120px;
+    height:130px;
+    background-color:#fff;
+}
+
+.image-button:hover {
+    border-radius: 30%;
+    transform: translateY(-3px); /* Move o botão levemente para cima */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Intensifica a sombra no hover */
+}
+
+#pause-pagina {
+    background-image: url('../imagens/pause.png');
+    background-size: 70%;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container-pause {
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    gap: 70px;
+    font-size: 20px;
+    font-weight: bold;
+    border: none;
+    outline: none;
+    box-shadow: none;
+}
+
+.btn-retomar:hover, .btn-menu:hover {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.8); /* Sombra mais forte ao passar o mouse */
+    transform: scale(1.05); /* Aumenta levemente o tamanho do botão */
+}
+
+.btn-retomar {
+    border-radius: 38px;
+    position: absolute;
+    top: 45.69%;
+    left: 43.2%;
+    width: 192px;
+    height: 65px;
+    text-align: center;
+    background-color: hsla(19, 31%, 43%, 0.863);
+    color: white;
+    font-size: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.btn-menu {
+    border-radius: 38px;
+    position: absolute;
+    top: 56.8%;
+    left: 43.6%;
+    width: 180px;
+    height: 59px;
+    text-align: center;
+    background-color: hsla(19, 31%, 43%, 0.863);
+    color: white;
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+#gameover-pagina {
+    background-image: url('../imagens/gameover.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container-over {
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    gap: 70px;
+    font-size: 20px;
+    font-weight: bold;
+    border: none;
+    outline: none;
+    box-shadow: none;
+}
+
+.btn-inicio {
+    border-radius: 38px;
+    position: absolute;
+    top: 44.9%;
+    left: 52.7%;
+    width: 330px;
+    height: 112px;
+    text-align: center;
+    background-color: hsla(19, 31%, 43%, 0.863);
+    color: white;
+    font-size: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.btn-newgame {
+    border-radius: 38px;
+    position: absolute;
+    top: 63.8%;
+    left: 52.7%;
+    width: 330px;
+    height: 112px;
+    text-align: center;
+    background-color: hsla(19, 31%, 43%, 0.863);
+    color: white;
+    font-size: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.btn-inicio:hover, .btn-newgame:hover {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.8); /* Sombra mais forte ao passar o mouse */
+    transform: scale(1.05); /* Aumenta levemente o tamanho do botão */
+}

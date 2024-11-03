@@ -71,10 +71,15 @@ class BANANACAT extends obj
 {
     detectCollision(obj) 
     {
-        return this.px < obj.px + obj.width &&   //a's top left corner doesn't reach b's top right corner
-               this.px + this.width > obj.px &&   //a's top right corner passes b's top left corner
-               this.py < obj.py + obj.height &&  //a's top left corner doesn't reach b's bottom left corner
-               this.py + this.height > obj.py;    //a's bottom left corner passes b's top left corner
+        if(this.px < obj.px + obj.width && this.px + this.width > obj.px && 
+           this.py < obj.py + obj.height && this.py + this.height > obj.py) 
+        {
+            return true
+        }
+        else
+        {
+            return false
+        }
     }
 }
 
@@ -87,5 +92,16 @@ class OBSTACLES extends obj
         {
             this.px = Math.random() * (max - min) + min
         }
+    }
+}
+
+class SCORE
+{
+
+    show(text, x, y)
+    {
+        board.font = "40px Arial"
+        board.fillstyle = "black"
+        board.fillText(text, x, y)
     }
 }
