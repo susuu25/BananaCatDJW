@@ -101,7 +101,7 @@ class SCORE
     show(text, x, y)
     {
         board.font = "40px Arial"
-        board.fillstyle = "black"
+        board.fillstyle = "white"
         board.fillText(text, x, y)
     }
 }
