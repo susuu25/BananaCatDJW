@@ -35,7 +35,7 @@ function update()
     
     speedDown += gravity
     bananaCat.py = Math.min(bananaCat.py + speedDown, 1145)
-    bananaCat.animation(10, 8, 'bananaCat')
+    bananaCat.animation(10, 8, 'bananaCatWhite')
 
     puddle.moveRespaw(8, 2000, 1000, 900)
     dog.moveRespaw(13, 2000, 2000, 100)
