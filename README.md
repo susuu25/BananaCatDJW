@@ -27,6 +27,8 @@
 ### bananaCat2.js
 <p>O código começa com os elementos das classes sendo instanciadops como variáveis. A classe BG recebe a imagem do fundo. A classe BANANACAT recebe a imagem do gato. A classe OBSTACLES recebe a imagem da poça d'água. A classe SCORE recebe o placar. Depois, são criadas as funções: draw, jump, update, collision e main. A function draw desenha as imagens. A function update faz a animação do fundo da tela, a do Banana Cat e a animação das poças. Também é responsável por gerar as poças e chamar as funções jump e collision. A function jump programa os pulos que o gato tem que dar para não colidir com as poças. A function collision programa o que acontece quando o gato colide com algum dos obstáculos, resultando na perca do jogo. Por fim, a function main  limpa o espaço da tela quando esta é reiniciada, faz a animação e chama as functions draw e update.</p> 
 
+<p>Os outrros documentos de JavaScrpit são o mesmo código, mas com as cores do protagonista mudadas para verde ou branco.</p>
+
  
 
 ## Efeitos sonoros
