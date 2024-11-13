@@ -22,6 +22,8 @@
 <image> <img src="https://raw.githubusercontent.com/susuu25/BananaCatDJW/refs/heads/main/imagens/gato%20branco.png"> </image>
 <p>Banana Car é o personagem principal no jogo, um gato vestido de banana, que precisa desviar de poças d'água e cachorros.</p>
 <p>Ele tem 3 variações de cor, sendo elas a amarela(principal) a verde e a branca.</p>
+<h3> Poça de Água </h3>
+<p>É uma poça feita de água no qual o Banana Cat terá de pular sobre elas, caso o Banana Cat tocar na poça, ele ficara molhado, e gato mais água não é nada bom</p>
 
 ## Códigos
 
