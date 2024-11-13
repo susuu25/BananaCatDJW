@@ -5,15 +5,17 @@ let gravity = 0.4
 
 let bg = new BG(0, 0, 1920, 1295, 'sprites/background.jpg')
 let bg2 = new BG(1920, 0, 1920, 1295, 'sprites/background.jpg')
-let ground = new BG(0, 1200, 1920, 250, 'sprites/ground.jpg')
-let ground2 = new BG(1920, 1200, 1920, 250, 'sprites/ground.jpg')
+let ground = new BG(0, 1200, 1920, 150, 'sprites/ground.jpg')
+let ground2 = new BG(1920, 1200, 1920, 150, 'sprites/ground.jpg')
 
-let bananaCat = new BANANACAT(50, 1130, 150, 150, 'sprites/bananaCat1.png')
+let bananaCat = new BANANACAT(50, 1115, 150, 150, 'sprites/bananaCat1.png')
 let puddle = new OBSTACLES(1920, 1200, 190, 110, 'sprites/puddle.png')
 let dog = new OBSTACLES(1920, 1145, 190, 110, 'sprites/dog.png')
 
 let score = new SCORE()
 counter = 0
+
+let music = new Audio('sons/gameMusic.mp3')
 
 function draw() 
 {
@@ -34,7 +36,7 @@ function update()
     ground2.move(8, 0, 1920)
     
     speedDown += gravity
-    bananaCat.py = Math.min(bananaCat.py + speedDown, 1130)
+    bananaCat.py = Math.min(bananaCat.py + speedDown, 1115)
     bananaCat.animation(10, 8, 'bananaCat')
 
     puddle.moveRespaw(8, 2000, 1000, 900)
@@ -42,6 +44,9 @@ function update()
 
     counter++
     score.show(counter, 940, 350)
+
+    music.loop = true
+    music.play()
 
     jump()
     collision()
@@ -53,7 +58,7 @@ function jump()
 {
     document.addEventListener("keypress", function(e)
         {
-        if((e.code == "Space" || e.code == "ArrowUP") && bananaCat.py == 1130)
+        if((e.code == "Space" || e.code == "ArrowUP") && bananaCat.py == 1115)
             {
                 speedDown = -17
             } 
