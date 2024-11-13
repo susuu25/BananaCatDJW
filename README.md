@@ -1,3 +1,15 @@
+## Participantes
+<ul>
+ <li>Susana Correia</li>
+ <li>Sabrina Caetano</li>
+ <li>Murilo Rangel</li>
+ <li>Kevin Cavalcante</li>
+ <li>Kauan de Carmo</li>
+ <li>Samuel Paiva</li>
+ <li>Vitória Colussi</li>
+ <li>Pedro Santos</li>
+</ul>
+
 ## Proposta
 <p>O jogo Banana Cat foi criado com inspiração direta no minigame do dinossauro disponibilizado pelo Google quando o navegador está sem conexão com a internet.</p>
 
