@@ -97,11 +97,10 @@ class OBSTACLES extends obj
 
 class SCORE
 {
-
     show(text, x, y)
     {
-        board.font = "40px Arial"
-        board.fillstyle = "white"
+        board.font = "60px Courier New"
+        board.fillStyle = 'white'
         board.fillText(text, x, y)
     }
 }

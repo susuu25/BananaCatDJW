@@ -8,8 +8,8 @@ let bg2 = new BG(1920, 0, 1920, 1295, 'sprites/background.jpg')
 let ground = new BG(0, 1200, 1920, 250, 'sprites/ground.jpg')
 let ground2 = new BG(1920, 1200, 1920, 250, 'sprites/ground.jpg')
 
-let bananaCat = new BANANACAT(250, 1145, 150, 150, 'sprites/bananaCat1.png')
-let puddle = new OBSTACLES(1920, 1145, 190, 110, 'sprites/puddle.png')
+let bananaCat = new BANANACAT(50, 1130, 150, 150, 'sprites/bananaCat1.png')
+let puddle = new OBSTACLES(1920, 1200, 190, 110, 'sprites/puddle.png')
 let dog = new OBSTACLES(1920, 1145, 190, 110, 'sprites/dog.png')
 
 let score = new SCORE()
@@ -28,20 +28,20 @@ function draw()
 
 function update()
 {
-    bg.move(7, 1920, 0)
-    bg2.move(7, 0, 1920)
-    ground.move(7, 1920, 0)
-    ground2.move(7, 0, 1920)
+    bg.move(8, 1920, 0)
+    bg2.move(8, 0, 1920)
+    ground.move(8, 1920, 0)
+    ground2.move(8, 0, 1920)
     
     speedDown += gravity
-    bananaCat.py = Math.min(bananaCat.py + speedDown, 1145)
+    bananaCat.py = Math.min(bananaCat.py + speedDown, 1130)
     bananaCat.animation(10, 8, 'bananaCat')
 
     puddle.moveRespaw(8, 2000, 1000, 900)
-    dog.moveRespaw(13, 2000, 2000, 100)
+    dog.moveRespaw(20, 2000, 3000, 3000)
 
     counter++
-    score.show(counter, 250, 950)
+    score.show(counter, 940, 350)
 
     jump()
     collision()
@@ -53,7 +53,7 @@ function jump()
 {
     document.addEventListener("keypress", function(e)
         {
-        if((e.code == "Space" || e.code == "ArrowUP") && bananaCat.py == 1145)
+        if((e.code == "Space" || e.code == "ArrowUP") && bananaCat.py == 1130)
             {
                 speedDown = -17
             } 
