@@ -16,6 +16,7 @@ let score = new SCORE()
 counter = 0
 
 let music = new Audio('sons/gameMusic.mp3')
+let jumpSound = new Audio('sons/jump.mp3')
 
 function draw() 
 {
@@ -61,6 +62,7 @@ function jump()
         if((e.code == "Space" || e.code == "ArrowUP") && bananaCat.py == 1115)
             {
                 speedDown = -17
+                jumpSound.play()
             } 
         })
 }

@@ -15,6 +15,9 @@ let dog = new OBSTACLES(1920, 1145, 190, 110, 'sprites/dog.png')
 let score = new SCORE()
 counter = 0
 
+let music = new Audio('sons/gameMusic.mp3')
+let jumpSound = new Audio('sons/jump.mp3')
+
 function draw() 
 {
     bg.drawing()
@@ -43,6 +46,9 @@ function update()
     counter++
     score.show(counter, 940, 350)
 
+    music.loop = true
+    music.play()
+
     jump()
     collision()
     pause()
@@ -56,6 +62,7 @@ function jump()
         if((e.code == "Space" || e.code == "ArrowUP") && bananaCat.py == 1115)
             {
                 speedDown = -17
+                jumpSound.play()
             } 
         })
 }
