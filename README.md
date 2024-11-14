@@ -24,7 +24,8 @@
 <p>Ele tem 3 variações de cor, sendo elas a amarela(principal) a verde e a branca.</p>
 <h3> Poça de Água </h3>
 <p>É uma poça feita de água no qual o Banana Cat terá de pular sobre elas, caso o Banana Cat tocar na poça, ele ficara molhado, e gato mais água não é nada bom</p>
-
+<h3>Dog</h3>
+<p>É um cachorro que o intuito dele é caçar o nosso querido Banana Cat, ao encostar nele infelizmente o Banana Cat perderá</p>
 ## Códigos
 
 ### Classes.js
