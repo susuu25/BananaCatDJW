@@ -48,7 +48,7 @@ h1 {
 }
 
 #pagina-armario {
-    background-image: url('../imagens/armario.png');
+    background-image: url('../imagens/armario.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -80,7 +80,7 @@ h1 {
 /* Posições específicas dos botões */
 #botao1 {
     background-image: url('../imagens/gato amarelo.png');
-    top: 46.3%;
+    top: 47.4%;
     left: 64.1%;
     background-color:#fff;
     width:120px;
@@ -98,7 +98,7 @@ h1 {
 
 #botao3 {
     background-image: url('../imagens/gato verde.png');
-    top: 65%;
+    top: 64%;
     left: 69.3%;
     width:120px;
     height:130px;
@@ -114,6 +114,20 @@ h1 {
 #pause-pagina {
     background-image: url('../imagens/pause.png');
     background-size: 70%;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+#index-pagina {
+    background-image: url('../imagens/indeximg.jpg');
+    background-size: 100%;
     background-position: center;
     background-repeat: no-repeat;
     position: relative;
@@ -177,7 +191,7 @@ h1 {
 }
 
 #gameover-pagina {
-    background-image: url('../imagens/gameover.jpeg');
+    background-image: url('../imagens/gameover.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -206,11 +220,11 @@ h1 {
     border-radius: 38px;
     position: absolute;
     top: 44.9%;
-    left: 52.7%;
+    left: 59%;
     width: 330px;
     height: 112px;
     text-align: center;
-    background-color: hsla(19, 31%, 43%, 0.863);
+    background-color: rgba(58, 78, 95, 0.87);
     color: white;
     font-size: 35px;
     display: flex;
@@ -222,12 +236,12 @@ h1 {
 .btn-newgame {
     border-radius: 38px;
     position: absolute;
-    top: 63.8%;
-    left: 52.7%;
+    top: 62.3%;
+    left: 59%;
     width: 330px;
     height: 112px;
     text-align: center;
-    background-color: hsla(19, 31%, 43%, 0.863);
+    background-color: rgba(58, 78, 95, 0.87);
     color: white;
     font-size: 35px;
     display: flex;
@@ -240,3 +254,102 @@ h1 {
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.8); /* Sombra mais forte ao passar o mouse */
     transform: scale(1.05); /* Aumenta levemente o tamanho do botão */
 }
+
+.btn-iniciar{
+    border-radius: 38px;
+    position: absolute;
+    top: 50%;
+    left:40%;
+    width: 330px;
+    height: 100px;
+    text-align: center;
+    background-color: hsl(208, 24%, 30%);
+    color: white;
+    font-size: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight:bold;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.btn-armario{
+    border-radius: 38px;
+    position: absolute;
+    top: 65%;
+    left: 40%;
+    width: 330px;
+    height: 100px;
+    text-align: center;
+    background-color: hsl(208, 24%, 30%);
+    color: white;
+    font-size: 40px;
+    font-weight:bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.btn-iniciar:hover, .btn-armario:hover {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.8); /* Sombra mais forte ao passar o mouse */
+    transform: scale(1.05); /* Aumenta levemente o tamanho do botão */
+}
+
+#body-game {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #2b2d42, #8d99ae);
+  }
+  
+  .rain {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Permite clicar nos elementos abaixo */
+    overflow: hidden;
+  }
+  
+  .drop {
+    position: absolute;
+    width: 2px;
+    height: 20px;
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 1px;
+    animation: fall 1s linear infinite;
+  }
+  
+  .drop:nth-child(1) { left: 10%; animation-delay: 0s; }
+  .drop:nth-child(2) { left: 20%; animation-delay: 0.2s; }
+  .drop:nth-child(3) { left: 30%; animation-delay: 0.4s; }
+  .drop:nth-child(4) { left: 40%; animation-delay: 0.6s; }
+  .drop:nth-child(5) { left: 50%; animation-delay: 0.8s; }
+  .drop:nth-child(6) { left: 60%; animation-delay: 1s; }
+  .drop:nth-child(7) { left: 70%; animation-delay: 1.2s; }
+  .drop:nth-child(8) { left: 80%; animation-delay: 1.4s; }
+  .drop:nth-child(9) { left: 90%; animation-delay: 1.6s; }
+  .drop:nth-child(10) { left: 95%; animation-delay: 1.8s; }
+  
+  @keyframes fall {
+    0% {
+      top: -50px;
+      opacity: 0;
+    }
+    30% {
+      opacity: 1;
+    }
+    100% {
+      top: 100vh;
+      opacity: 0;
+    }
+  }
+  
+  .content {
+    position: relative;
+    z-index: 1; /* Garante que o conteúdo fique acima do fundo */
+    padding: 20px;
+    text-align: center;
+    color: white;
+  }
