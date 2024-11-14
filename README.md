@@ -49,3 +49,9 @@
  
 
 ## Efeitos sonoros
+<h3>Jump Sound</h3>
+Este é o som de quando o Banana Cat pula sobre os obstaculos ou até mesmo pulando sem motivo.
+É um som leve cujo som é aumentado em milésimos trazendo sobre si um som de algo pulando porém de um jeito animatizado
+<h3>Game Music Sound</h3>
+É um som mais longo pois é para representar o fundo do jogo.
+Igual o Jump Sound é de um jeito animatizado porém muito mais do que o Jump Sound, sendo um som gamertizado e que chame a atenção, deixando a experiência mais imersiva.
